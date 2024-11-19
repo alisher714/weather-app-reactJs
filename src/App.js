@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFrown } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 
-
 function WeatherApp() {
   const [input, setInput] = useState("");
   const [weather, setWeather] = useState({
@@ -86,7 +85,10 @@ function WeatherApp() {
           onChange={(event) => setInput(event.target.value)}
           onKeyPress={(event) => search(event)}
         />
-        <button class="bx bx-search" onClick={(event) => search(event, true)}></button>
+        <button
+          class="bx bx-search"
+          onClick={(event) => search(event, true)}
+        ></button>
       </div>
       {weather.loading && (
         <>
@@ -99,7 +101,8 @@ function WeatherApp() {
         <>
           <br />
           <span className="error-message">
-            <FontAwesomeIcon icon={faFrown} />
+            {/* <FontAwesomeIcon icon={faFrown} /> */}
+            <img src="/404.png"></img>
             <span style={{ fontSize: "20px" }}>City not found</span>
           </span>
         </>
@@ -120,8 +123,8 @@ function WeatherApp() {
               src={`https://openweathermap.org/img/wn/${weather.data.weather[0].icon}@2x.png`}
               alt={weather.data.weather[0].description}
             />
-            {Math.round(weather.data.main.temp)}
-            <sup className="deg">°C</sup>
+              {Math.round(weather.data.main.temp)}
+              <sup className="deg">°C</sup>
           </div>
           <div className="des-wind">
             <p>{weather.data.weather[0].description.toUpperCase()}</p>
