@@ -22,9 +22,10 @@ html {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 500px;
+	width: 450px;
 	min-height: 50px;
 	/* background-color: rgb(255, 255, 255); */
+  background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(15px);
 	text-align: center;
 	margin: 40px auto;
@@ -34,33 +35,62 @@ html {
 	box-shadow: 3px 3px 10px #818181;
 }
 
+.search-bar{
+  width: 80%;
+  border: 1px solid rgb(255, 255, 255, 0.5);
+  box-sizing: border-box;
+	font-size: 20px;
+  font-weight: 500; 
+  box-shadow: 3px 3px 8px #818181;
+  border-radius: 20px;
+  display: flex;  
+}
+
 .city-search {
-	width: 100%;
+	width: 70%;
 	max-width: 400px;
-	box-sizing: border-box;
-	border: 1px solid rgb(255, 255, 255, 0.5);
 	outline: none;
-	border-radius: 20px;
+  border: none;
 	font-size: 20px;
 	background: transparent;
 	background-position: 10px 12px;
 	background-repeat: no-repeat;
-	padding: 12px 40px 12px 40px;
 	/* -webkit-transition: width 0.4s ease-in-out; */
 	transition: width 0.4s ease-in-out;
 	color: #ffffff;
-  text-transform: uppercase;
-  font-weight: 500; 
-  box-shadow: 3px 3px 8px #818181;
+  text-transform: uppercase; 
+  margin-left: 5px;
+}
+
+.search-bar i{
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-size: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.search-bar button{
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 30px; 
+  left: 0;
+  color: white;
+}
+
+.search-bar button:hover{
+  cursor: pointer;
 }
 
 .city-search::placeholder{
   color: #ffff;
 }
 
-.city-search:focus {
+/* .city-search:focus {
 	width: 100%;
-}
+} */
 
 .city-name {
 	font-size: 1.5rem;
