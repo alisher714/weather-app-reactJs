@@ -1,8 +1,8 @@
 import { Oval } from "react-loader-spinner";
 import React, { useState } from "react";
 import axios from "axios";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFrown } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faFrown } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 
 function WeatherApp() {
@@ -102,7 +102,7 @@ function WeatherApp() {
           <br />
           <span className="error-message">
             {/* <FontAwesomeIcon icon={faFrown} /> */}
-            <img src="/404.png"></img>
+            <img src="/404.png" alt=""></img>
             <span style={{ fontSize: "20px" }}>City not found</span>
           </span>
         </>
